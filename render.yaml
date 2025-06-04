@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-itinerario-bot
+    env: python
+    plan: free
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: WEBHOOK_URL
+        sync: false
